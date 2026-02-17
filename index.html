@@ -24,6 +24,7 @@
         background: url('recibimostuinscripcion.png') no-repeat center center/cover;
         backdrop-filter: blur(3px);
         padding:20px;
+        position:relative;
     }
 
     .overlay{
@@ -105,6 +106,18 @@
         box-shadow:0 0 15px #00ff88;
     }
 
+    .vamos{
+        margin-top:30px;
+        font-weight:bold;
+        font-size:clamp(18px,4vw,22px);
+    }
+
+    .logo-bottom{
+        width:80px;
+        margin-top:10px;
+        opacity:0.9;
+    }
+
     @media(max-width:480px){
         .logo{
             width:110px;
@@ -112,6 +125,9 @@
         .btn{
             font-size:14px;
             padding:12px 28px;
+        }
+        .logo-bottom{
+            width:65px;
         }
     }
 
@@ -134,8 +150,7 @@
 
     <p style="margin-top:10px; font-weight:bold;">
         ¡Gracias por ser parte de esta Locura!
-       Solo Falta hacer el aporte único y te enviaremos en acceso a nuestro grupo de hinchas
-      !VAMOS LOS PERSOS!
+        Solo Falta hacer el aporte único y te enviaremos en acceso a nuestro grupo de hinchas
     </p>
 
     <div class="button-wrapper">
@@ -145,8 +160,10 @@
         </a>
     </div>
 
+    <div class="vamos">¡VAMOS LOS PERSOS!</div>
+    <img src="logoweb.png" alt="Logo" class="logo-bottom">
+
 </div>
 
 </body>
 </html>
-
