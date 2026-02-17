@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscripción Exitosa</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+        height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        color:white;
+        background: url('recibimostuinscripcion.png') no-repeat center center/cover;
+        backdrop-filter: blur(3px);
+        padding:20px;
+    }
+
+    .overlay{
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        background: rgba(0,0,0,0.65);
+        z-index:0;
+    }
+
+    .container{
+        position:relative;
+        z-index:2;
+        max-width:600px;
+        width:100%;
+    }
+
+    .logo{
+        width:140px;
+        margin-bottom:25px;
+    }
+
+    h1{
+        font-size:clamp(22px, 5vw, 36px);
+        color:#00ff88;
+        text-shadow:0 0 10px #00ff88,
+                    0 0 20px #00ff88,
+                    0 0 40px #00ff88;
+        margin-bottom:20px;
+    }
+
+    p{
+        font-size:clamp(14px, 3.5vw, 18px);
+        margin-bottom:12px;
+        line-height:1.5;
+    }
+
+    .button-wrapper{
+        margin-top:35px;
+        position:relative;
+        display:inline-block;
+    }
+
+    .button-glow{
+        position:absolute;
+        top:50%;
+        left:50%;
+        width:200%;
+        height:200%;
+        background: radial-gradient(circle, rgba(0,255,100,0.7) 0%, transparent 60%);
+        transform:translate(-50%, -50%);
+        animation: glowPulse 2s infinite ease-in-out;
+        filter: blur(40px);
+        z-index:-1;
+    }
+
+    @keyframes glowPulse{
+        0%{ opacity:0.6; transform:translate(-50%, -50%) scale(0.9); }
+        50%{ opacity:1; transform:translate(-50%, -50%) scale(1.1); }
+        100%{ opacity:0.6; transform:translate(-50%, -50%) scale(0.9); }
+    }
+
+    .btn{
+        padding:14px 35px;
+        background:white;
+        color:black;
+        text-decoration:none;
+        font-weight:bold;
+        border-radius:40px;
+        font-size:16px;
+        transition:0.3s ease;
+        display:inline-block;
+    }
+
+    .btn:hover{
+        transform:scale(1.05);
+        box-shadow:0 0 15px #00ff88;
+    }
+
+    @media(max-width:480px){
+        .logo{
+            width:110px;
+        }
+        .btn{
+            font-size:14px;
+            padding:12px 28px;
+        }
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="container">
+
+    <img src="logoweb.png" alt="Logo" class="logo">
+
+    <h1>¡Recibimos tu inscripción Exitosamente!</h1>
+
+    <p>Te enviamos un correo electrónico</p>
+
+    <p>(Si no lo ves en tu bandeja principal revisa la bandeja de "Spam" o "Promociones")</p>
+
+    <p style="margin-top:10px; font-weight:bold;">
+        ¡Gracias por ser parte de esta Locura!
+    </p>
+
+    <div class="button-wrapper">
+        <div class="button-glow"></div>
+        <a href="https://persosunitedfcweboficial.pages.dev/" class="btn">
+            VOLVER A LA WEB
+        </a>
+    </div>
+
+</div>
+
+</body>
+</html>
